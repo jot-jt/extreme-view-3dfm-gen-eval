@@ -67,3 +67,15 @@ ETH3D:
     strategy: stride
     kf_every: 5
   seq_id_map: datasets/seq-id-maps/ETH3D_mv-recon_seq-id-map-kf5.json
+
+UnSceneRecon:
+  cfg:
+    _target_: datasets.megaunscene.MegaUnScene
+    megaunscene_root: data/megaunscene
+    scale_json_path: datasets/scale/unscenerecon.json
+    eval_images_json_path: datasets/sample_images/unscenerecon.json
+    load_img_size: ${load_img_size}
+    processed_cache_dir: data/dataset_cache/unscenerecon_processed
+  sampling:
+    strategy: all  # frames already subsampled in consolidated JSON
+  seq_id_map: datasets/seq-id-maps/MegaUnScene_seq-id-map.json

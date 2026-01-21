@@ -1,0 +1,702 @@
+{
+  "Makaravank-0": {
+    "scene": "Makaravank",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 5.099593717445311
+    }
+  },
+  "Mirów_Castle-0": {
+    "scene": "Mirów_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 30.726993295835165
+    }
+  },
+  "Diwan-i-Am_(Red_Fort)-0": {
+    "scene": "Diwan-i-Am_(Red_Fort)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 13.539464036265965
+    }
+  },
+  "Makaravank-3": {
+    "scene": "Makaravank",
+    "recon_id": "3",
+    "measurement": {
+      "metric_scale_factor": 2.773603872425734
+    }
+  },
+  "Gračanica_Monastery-0": {
+    "scene": "Gračanica_Monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 9.614753862253766
+    }
+  },
+  "Château_de_Suscinio-0": {
+    "scene": "Château_de_Suscinio",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.18990110827477
+    }
+  },
+  "National_Garden_Gate_(Tehran)-0": {
+    "scene": "National_Garden_Gate_(Tehran)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 2.946061901824933
+    }
+  },
+  "Tonbridge_Castle-0": {
+    "scene": "Tonbridge_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 15.211034611425934
+    }
+  },
+  "Arakelots_Vank,_Tavush-0": {
+    "scene": "Arakelots_Vank,_Tavush",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 1.6057395469318372
+    }
+  },
+  "Castle_Rising_Castle-0": {
+    "scene": "Castle_Rising_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.468685155116889
+    }
+  },
+  "Iglesia_de_San_José_de_Capellanía,_Cochabamba-0": {
+    "scene": "Iglesia_de_San_José_de_Capellanía,_Cochabamba",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 5.348319189224569
+    }
+  },
+  "Rathaus_Schweinfurt-0": {
+    "scene": "Rathaus_Schweinfurt",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 9.504765816755706
+    }
+  },
+  "Torhalle_Lorsch-0": {
+    "scene": "Torhalle_Lorsch",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 7.19696851727789
+    }
+  },
+  "Mohera_Zamindar_Bari-0": {
+    "scene": "Mohera_Zamindar_Bari",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.808924865805938
+    }
+  },
+  "Castle_in_Siewierz-0": {
+    "scene": "Castle_in_Siewierz",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 20.519763119192437
+    }
+  },
+  "Osterley_House-0": {
+    "scene": "Osterley_House",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 15.057054824542236
+    }
+  },
+  "Marmashen_Monastery-1": {
+    "scene": "Marmashen_Monastery",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 1.4950284006259307
+    }
+  },
+  "Wat_Yai_Chai_Mongkhon-0": {
+    "scene": "Wat_Yai_Chai_Mongkhon",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.459383855479681
+    }
+  },
+  "Gwrych_Castle-0": {
+    "scene": "Gwrych_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 41.19945527745285
+    }
+  },
+  "Villa_Gordiani_(Rome)_-_Mausoleum-0": {
+    "scene": "Villa_Gordiani_(Rome)_-_Mausoleum",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.753986359093586
+    }
+  },
+  "Makaravank-1": {
+    "scene": "Makaravank",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 0.6086627454918007
+    }
+  },
+  "Threave_Castle-0": {
+    "scene": "Threave_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 22.309729416459675
+    }
+  },
+  "Ishtar_Gate-0": {
+    "scene": "Ishtar_Gate",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 1.39114945629452
+    }
+  },
+  "Maqravank_Monastery-0": {
+    "scene": "Maqravank_Monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 12.611298883549336
+    }
+  },
+  "Naubat_Khana_(Red_Fort)-0": {
+    "scene": "Naubat_Khana_(Red_Fort)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 19.04644312549649
+    }
+  },
+  "Radzyń_Chełmiński_Castle-0": {
+    "scene": "Radzyń_Chełmiński_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 27.931660524504405
+    }
+  },
+  "Kecharis-0": {
+    "scene": "Kecharis",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 5.271240077719019
+    }
+  },
+  "Blickling_Hall-0": {
+    "scene": "Blickling_Hall",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 24.69692670504842
+    }
+  },
+  "Main_Post_Office_in_Bydgoszcz-0": {
+    "scene": "Main_Post_Office_in_Bydgoszcz",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 17.099519460100176
+    }
+  },
+  "Pampanga_Provincial_Capitol-0": {
+    "scene": "Pampanga_Provincial_Capitol",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.315992958647852
+    }
+  },
+  "Palenque_-_Temple_of_inscriptions-0": {
+    "scene": "Palenque_-_Temple_of_inscriptions",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 16.335284888899967
+    }
+  },
+  "Nevitsky_Castle-0": {
+    "scene": "Nevitsky_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 8.796569362979175
+    }
+  },
+  "Wat_Chedi_Luang-0": {
+    "scene": "Wat_Chedi_Luang",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 15.877792535127218
+    }
+  },
+  "Burg_Anholt-3": {
+    "scene": "Burg_Anholt",
+    "recon_id": "3",
+    "measurement": {
+      "metric_scale_factor": 18.96702637899723
+    }
+  },
+  "Kašperk-1": {
+    "scene": "Kašperk",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 30.544888470125418
+    }
+  },
+  "Copernicanum_w_Bydgoszczy-0": {
+    "scene": "Copernicanum_w_Bydgoszczy",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 11.710632099845313
+    }
+  },
+  "Ardfert_Friary-0": {
+    "scene": "Ardfert_Friary",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 20.783655280529075
+    }
+  },
+  "Vaduz_Castle-0": {
+    "scene": "Vaduz_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 25.78337134045542
+    }
+  },
+  "Schloss_Solitude-0": {
+    "scene": "Schloss_Solitude",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 12.605087247928505
+    }
+  },
+  "Zollernschloss_(Balingen)-0": {
+    "scene": "Zollernschloss_(Balingen)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 17.11796309816974
+    }
+  },
+  "Burgruine_Wolfstein-0": {
+    "scene": "Burgruine_Wolfstein",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.760314438353779
+    }
+  },
+  "Koninklijk_Weeshuis_(Buren)-0": {
+    "scene": "Koninklijk_Weeshuis_(Buren)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 5.7634862223564705
+    }
+  },
+  "Museum_of_Angeles-0": {
+    "scene": "Museum_of_Angeles",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 4.310133045966215
+    }
+  },
+  "Castel_Sismondo-0": {
+    "scene": "Castel_Sismondo",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 7.698736247074934
+    }
+  },
+  "Convento_delle_Celle-0": {
+    "scene": "Convento_delle_Celle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.625722116037322
+    }
+  },
+  "Lion_Gate,_Hattusa-0": {
+    "scene": "Lion_Gate,_Hattusa",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 1.269328034262513
+    }
+  },
+  "Predjama_Castle-0": {
+    "scene": "Predjama_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 13.507203579837833
+    }
+  },
+  "Kamerlengo-0": {
+    "scene": "Kamerlengo",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 22.013037589213376
+    }
+  },
+  "Bodiam_Castle-0": {
+    "scene": "Bodiam_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 23.354130699448497
+    }
+  },
+  "Mission_San_José_y_San_Miguel_de_Aguayo-0": {
+    "scene": "Mission_San_José_y_San_Miguel_de_Aguayo",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 16.38336911398431
+    }
+  },
+  "Trim_Castle-0": {
+    "scene": "Trim_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 26.155177419296294
+    }
+  },
+  "Boro_Sardar_Bari_(Panam_City)-0": {
+    "scene": "Boro_Sardar_Bari_(Panam_City)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 8.612829882620264
+    }
+  },
+  "Château_de_Cormatin-0": {
+    "scene": "Château_de_Cormatin",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 24.202686504252963
+    }
+  },
+  "Wat_Rong_Khun,_Chiang_Rai-0": {
+    "scene": "Wat_Rong_Khun,_Chiang_Rai",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 28.196156321612925
+    }
+  },
+  "Kilkenny_Castle-1": {
+    "scene": "Kilkenny_Castle",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 13.668326548677793
+    }
+  },
+  "Gandzasar-0": {
+    "scene": "Gandzasar",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 11.594033129804611
+    }
+  },
+  "Krzyżtopór_Castle-0": {
+    "scene": "Krzyżtopór_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 20.775885357803865
+    }
+  },
+  "Kirby_Muxloe_Castle-0": {
+    "scene": "Kirby_Muxloe_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 18.605056779112974
+    }
+  },
+  "Soroca_Fort-0": {
+    "scene": "Soroca_Fort",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 11.961150909444404
+    }
+  },
+  "Kremenets_Castle-0": {
+    "scene": "Kremenets_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 15.51444669906381
+    }
+  },
+  "Kilkenny_Castle-0": {
+    "scene": "Kilkenny_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 19.938774084001363
+    }
+  },
+  "Makaravank-2": {
+    "scene": "Makaravank",
+    "recon_id": "2",
+    "measurement": {
+      "metric_scale_factor": 2.296497392163792
+    }
+  },
+  "Mission_Concepcion,_San_Antonio,_Texas-0": {
+    "scene": "Mission_Concepcion,_San_Antonio,_Texas",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.826086681563842
+    }
+  },
+  "Vianden_castle-0": {
+    "scene": "Vianden_castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 59.56475262173821
+    }
+  },
+  "Fazenda_do_Pinhal-1": {
+    "scene": "Fazenda_do_Pinhal",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 6.192465720154751
+    }
+  },
+  "Massandra_Palace-2": {
+    "scene": "Massandra_Palace",
+    "recon_id": "2",
+    "measurement": {
+      "metric_scale_factor": 6.233842183180832
+    }
+  },
+  "Ritz_Tower-0": {
+    "scene": "Ritz_Tower",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 12.907686916258385
+    }
+  },
+  "Pangasinan_Provincial_Capitol-1": {
+    "scene": "Pangasinan_Provincial_Capitol",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 8.441567187325491
+    }
+  },
+  "Castle_of_Hunedoara-1": {
+    "scene": "Castle_of_Hunedoara",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 5.0375493245671645
+    }
+  },
+  "Porte_de_la_Craffe-0": {
+    "scene": "Porte_de_la_Craffe",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.063117438744683
+    }
+  },
+  "Bobolice_Castle-0": {
+    "scene": "Bobolice_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 28.079941159774165
+    }
+  },
+  "Wat_Phra_Si_Sanphet-0": {
+    "scene": "Wat_Phra_Si_Sanphet",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 22.67647323829167
+    }
+  },
+  "Kyu-Furukawa_Gardens-0": {
+    "scene": "Kyu-Furukawa_Gardens",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.473301432243445
+    }
+  },
+  "Castle_and_cathedral_complex_in_Kwidzyn-0": {
+    "scene": "Castle_and_cathedral_complex_in_Kwidzyn",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 20.9908546859867
+    }
+  },
+  "Viroconium_Cornoviorum-0": {
+    "scene": "Viroconium_Cornoviorum",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 8.113171365855655
+    }
+  },
+  "Dunguaire_Castle-0": {
+    "scene": "Dunguaire_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 16.861458020997244
+    }
+  },
+  "Melrose_Abbey-0": {
+    "scene": "Melrose_Abbey",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 12.463923702616947
+    }
+  },
+  "Manasija_Monastery-0": {
+    "scene": "Manasija_Monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 7.413976085034479
+    }
+  },
+  "Carew_Castle-0": {
+    "scene": "Carew_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 30.119005472946366
+    }
+  },
+  "Castello_Visconteo_(Pavia)-0": {
+    "scene": "Castello_Visconteo_(Pavia)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 12.623520547545152
+    }
+  },
+  "Koppelpoort-1": {
+    "scene": "Koppelpoort",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 7.093202141776523
+    }
+  },
+  "Aghavnavank_Monastery-0": {
+    "scene": "Aghavnavank_Monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 6.9168346610565585
+    }
+  },
+  "Kolossi_Castle-0": {
+    "scene": "Kolossi_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 9.803160951273988
+    }
+  },
+  "Cimitero_Monumentale_(Milan)_-_Famedio-0": {
+    "scene": "Cimitero_Monumentale_(Milan)_-_Famedio",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 8.29458374842848
+    }
+  },
+  "Diwan-i-Khas_(Lahore_Fort)-0": {
+    "scene": "Diwan-i-Khas_(Lahore_Fort)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 10.501320951615714
+    }
+  },
+  "Alimbeg_house_(Tetovo)-0": {
+    "scene": "Alimbeg_house_(Tetovo)",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 4.25862260071882
+    }
+  },
+  "Trakai_Island_Castle-0": {
+    "scene": "Trakai_Island_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 36.57318150551135
+    }
+  },
+  "Bigorski_Monastery-0": {
+    "scene": "Bigorski_Monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 4.280803141255189
+    }
+  },
+  "Alamgiri_Gate-0": {
+    "scene": "Alamgiri_Gate",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 14.391662208907144
+    }
+  },
+  "Cârța_monastery-0": {
+    "scene": "Cârța_monastery",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 13.218070186947195
+    }
+  },
+  "Czocha_Castle-0": {
+    "scene": "Czocha_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 9.960819437935703
+    }
+  },
+  "Yeni-Kale-0": {
+    "scene": "Yeni-Kale",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 8.759723966501745
+    }
+  },
+  "Misión_de_Santiago_de_Jalpan_de_Serra-0": {
+    "scene": "Misión_de_Santiago_de_Jalpan_de_Serra",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 7.170244417732727
+    }
+  },
+  "Karla_Caves-1": {
+    "scene": "Karla_Caves",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 7.617894693180613
+    }
+  },
+  "Tilla-Kori_Madrasa-1": {
+    "scene": "Tilla-Kori_Madrasa",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 1.553489993880922
+    }
+  },
+  "Cercul_Militar_Național-1": {
+    "scene": "Cercul_Militar_Național",
+    "recon_id": "1",
+    "measurement": {
+      "metric_scale_factor": 7.770959330791816
+    }
+  },
+  "Slot_Loevestein-0": {
+    "scene": "Slot_Loevestein",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 24.522826066402537
+    }
+  },
+  "Amar_Singh_gate,_Agra_Fort-0": {
+    "scene": "Amar_Singh_gate,_Agra_Fort",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 1.94891385700004
+    }
+  },
+  "Donnington_Castle-0": {
+    "scene": "Donnington_Castle",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 15.282712355058306
+    }
+  },
+  "Wasserschloss_Glatt-0": {
+    "scene": "Wasserschloss_Glatt",
+    "recon_id": "0",
+    "measurement": {
+      "metric_scale_factor": 11.717066756701579
+    }
+  }
+}

@@ -9,8 +9,8 @@ from PIL import Image, ImageFile
 from torch.utils.data import Dataset
 import rootutils
 root = rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
-from models.vggt.utils.geometry import unproject_depth_map_to_point_map
-from datasets.utils.cropping import resize_image_depth_and_intrinsic
+from models.vggt.utils.geometry import unproject_depth_map_to_point_map  # noqa: E402
+from datasets.utils.cropping import resize_image_depth_and_intrinsic     # noqa: E402
 
 Image.MAX_IMAGE_PIXELS = None
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -25,7 +25,7 @@ class ETH3D(Dataset):
     ):
         
         self.ETH3D_DIR = ETH3D_DIR
-        if ETH3D_DIR == None:
+        if ETH3D_DIR is None:
             raise NotImplementedError
         print(f"ETH3D_DIR is {ETH3D_DIR}")
 
@@ -97,7 +97,7 @@ class ETH3D(Dataset):
         image_paths: list      = [""] * len(ids)
         images: list           = [0]  * len(ids)
         depths: list           = [0] * len(ids)
-        extrinsics: np.ndarray = np.zeros((len(ids), 3, 4))
+        extrinsics: np.ndarray = np.zeros((len(ids), 4, 4))
         intrinsics: np.ndarray = np.zeros((len(ids), 3, 3))
 
         for id_index, id in enumerate(ids):
@@ -127,13 +127,13 @@ class ETH3D(Dataset):
             images[id_index]      = to_tensor(rgb_image)
             depths[id_index]      = depthmap
             intrinsics[id_index]  = intrinsic
-            extrinsics[id_index]  = extrinsic[:3, :]
+            extrinsics[id_index]  = extrinsic
 
         depths = np.array(depths)  # (S, H, W)
         pointclouds = unproject_depth_map_to_point_map(
             depth_map=depths[..., None],
             intrinsics_cam=intrinsics,
-            extrinsics_cam=extrinsics
+            extrinsics_cam=extrinsics[:, :3, :]
         )
 
         batch = {"seq_id": sequence_name, "seq_len": seq_len, "ind": torch.tensor(ids)}
@@ -141,8 +141,8 @@ class ETH3D(Dataset):
         batch['images']      = torch.stack(images, dim=0)
         batch['pointclouds'] = pointclouds  # in numpy
         batch['valid_mask']  = depths > 1e-4
-        # batch["extrs"] = extrinsics
-        # batch["intrs"] = intrinsics
+        batch["extrs"] = torch.tensor(extrinsics)
+        batch["intrs"] = intrinsics
         # batch["w"] = metadata["w"]
         # batch["h"] = metadata["h"]
 

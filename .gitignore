@@ -10,13 +10,11 @@ cache
 batchscript-*
 
 # with information, but uncessary to remote
-/checkpoints
-/ckpts
 /data
 /evaluations
 /logs
 /inputs
-/outputs
+/outputs*
 /thirdparty
 /trainlog
 /tmp

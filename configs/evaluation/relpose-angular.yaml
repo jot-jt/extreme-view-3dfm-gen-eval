@@ -7,11 +7,16 @@ name: relpose-angular
 
 eval_models:
   - pi3
+  - pi3_exrot
   - vggt
+  - vggt_exrot
+  - worldmirror
+  - worldmirror_exrot
 
 eval_datasets:
   - Re10K
-  - CO3Dv2
+  # - CO3Dv2
+  - ETH3D
 
 no_crop: False
 load_img_size: 512

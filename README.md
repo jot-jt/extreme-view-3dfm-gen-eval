@@ -1,34 +1,46 @@
-# Evaluation for Reconstruction
+# Extreme-View 3DFM Generalization Evaluations
 
-A unified evaluation framework for 3D reconstruction, used in [π³](https://arxiv.org/abd/2507.13347).
+<a href="https://arxiv.org/abs/2511.22686"><img src="https://img.shields.io/badge/arXiv-2511.22686-b31b1b" alt="arXiv"></a> &nbsp;
+<a href="https://cornell-vailab.github.io/Ext-3DFMs/"><img src="https://img.shields.io/badge/Project_Page-green" alt="Project Page"></a> &nbsp;
+<a href="https://github.com/theREALevan/extreme-view-3dfm"><img src="https://img.shields.io/badge/Main_Code-black?logo=github" alt="Main Code Repository"></a> &nbsp;
+<a href="https://github.com/jot-jt/extreme-view-3dfm-gen-eval"><img src="https://img.shields.io/badge/Generalization_Evaluations-black?logo=github" alt="Generalization Eval Repository"></a> &nbsp;
+<a href="https://huggingface.co/datasets/cornell-vailab/megaunscene"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue" alt="Hugging Face"></a>
 
-This repo includes unofficial inference of some popular methods (e.g. [VGGT](https://github.com/facebookresearch/vggt), [MoGe](https://github.com/microsoft/MoGe)), if authors of these methods have any concerns about our implementation, please feel free to pull request or issue. (pull request is welcome!)
+A unified evaluation framework for 3D reconstruction, modified for the paper ["Emergent Extreme-View Geometry in 3D Foundation Models"](https://cornell-vailab.github.io/Ext-3DFMs/) ("Ext-3DFMs" for short).
 
-## Evaluation Overview
+This is a fork of the evaluation framework used in [π³](https://arxiv.org/abs/2507.13347), specifically from [this GitHub repository](https://github.com/ZhouTimeMachine/recons_eval). This fork is  meant to help replicate evaluations on VGGT, π³, and WorldMirror, as well as the respective finetuned models used in the Ext-3DFMs paper. Other evaluations used in the original π³ code still are available in this repository, but are not the main focus.
 
-- [x] Monocular Depth Estimation
-- [x] Video Depth Estimation
-- [x] Relative Camera Pose Estimation
-- [x] Multi-view Reconstruction (Point Map Estimation)
+Specifically, this code can be used to replicate Extreme-View 3DFM paper results for:
+- Monocular Depth Estimation on Sintel, Bonn, KITTI, and NYU-v2
+- Multiview Pose Estimation on RealEstate10K and ETH3D
+- Dense Reconstruction on UnSceneRecon, ETH3D, DTU, 7Scenes, and NRGBD
 
-The root config file of all evaluations is `configs/eval.yaml`, however you don't need to edit it
+For Extreme Relative Rotation Estimation evaluation, please see [the main GitHub repository](https://github.com/theREALevan/extreme-view-3dfm).
 
-- All main hyperparameters you need are in `configs/evaluation/xxxxx.yaml`
-- Sometimes you may want to change the dataset config in `configs/data/xxxxx.yaml`, or the model config in `configs/model/xxxxx.yaml`
+## Setup
 
-## Dataset Preparation
+Please clone the repository with submodules:
 
-- **Depth Estimation**: We follow [MonST3R](https://github.com/Junyi42/monst3r/blob/main/data/evaluation_script.md) to prepare Sintel, Bonn, KITTI and NYU-v2.
-- **Camera Pose Estimation**
-    - Angular: We follow [VGGT](https://github.com/facebookresearch/vggt/blob/evaluation/evaluation/README.md) to prepare Co3Dv2, and we afford [our script](datasets/preprocess/prepare_re10k.sh) for RealEstate10k preprocessing.
-    - Distance: We follow [MonST3R](https://github.com/Junyi42/monst3r/blob/main/data/evaluation_script.md) to prepare Sintel, TUM-dynamics and ScanNetv2.
-- **Point Map Estimation**: We follow [Spann3R](https://github.com/HengyiWang/spann3r/blob/main/docs/data_preprocess.md) to prepare 7-Scenes, Neural-NRGBD and DTU. We afford [our script](datasets/preprocess/prepare_eth3d.sh) for ETH3D preprocessing.
+```bash
+git clone --recurse-submodules https://github.com/theREALevan/extreme-view-3dfm.git
+```
 
-> We provide reference-only preprocessing scripts under `datasets/preprocess`. Please ensure you have obtained the necessary licenses from the original dataset providers before proceeding.
+### Configurations and General Documentation
+Please refer to the [original π³ GitHub repository's README](https://github.com/ZhouTimeMachine/recons_eval/blob/main/README.md) for evaluation/config documentation and dataset preparation details. For this fork, we focus on commands that replicate Ext-3DFMs' results.
+
+### Using MegaUnScene for UnSceneRecon Evaluation
+A new addition is the [MegaUnScene dataset](https://huggingface.co/datasets/cornell-vailab/megaunscene) for the UnSceneRecon dense reconstruction evaluation. Please update the MegaUnScene root or link the dataset accordingly in [configs/data/mv_recon.yaml](configs/data/mv_recon.yaml). Refer to the dataset page for download instructions.
+
+### Config Model Names
+In the configs, the model names are `vggt`, `pi3`, and `worldmirror`. The finetuned versions for extreme rotation are `vggt_exrot`, `pi3_exrot`, and `worldmirror_exrot`.
+
+For dense reconstruction, we evaluate the point head for VGGT (called `vggt_pointhead` and `vggt_exrot_pointhead`) in the paper, rather than the unprojected depth maps (`vggt` and `vggt_exrot`).
 
 ## 1. Monocular Depth Estimation
 
 See [monodepth/README.md](monodepth/README.md) for more details.
+
+To evaluate all of Pi3, VGGT, WorldMirror, and their finetuned versions on Sintel, Bonn, KITTI, and NYU-v2, run the commands below to use the preconfigured config at [configs/evaluation/monodepth.yaml](configs/evaluation/monodepth.yaml):
 
 ```bash
 python monodepth/infer.py
@@ -36,21 +48,22 @@ python monodepth/infer.py
 python monodepth/eval.py
 ```
 
-## 2. Video Depth Estimation
-
-configs in `configs/evaluation/videodepth.yaml`, see [videodepth/README.md](videodepth/README.md) for more details.
+To evaluate specific models and/or datasets, run:
 
 ```bash
-python videodepth/infer.py
-# torchrun --nnodes=1 --nproc_per_node=8 videodepth/infer_mp.py  # accelerate with multi gpus
-python videodepth/eval.py
+python monodepth/infer.py eval_models=[MODEL_NAMES] eval_datasets=[EVAL_DATASETS]
+python monodepth/eval.py eval_models=[MODEL_NAMES] eval_datasets=[EVAL_DATASETS]
 ```
 
-## 3. Relative Camera Pose Estimation
+where `MODEL_NAMES` is any of `pi3,pi3_exrot,vggt,vggt_exrot,worldmirror,worldmirror_exrot`
+
+and `EVAL_DATASETS` is any of `sintel,bonn,kitti,nyu-v2`
+
+## 2. Multiview Pose Estimation
 
 configs in `configs/evaluation/relpose-angular.yaml`, see [relpose/README.md](relpose/README.md) for more details.
 
-### 3.1 Angular Metrics
+To evaluate all of Pi3, VGGT, WorldMirror, and their finetuned versions on RealEstate10K and ETH3D, run the commands below to use the preconfigured config at [configs/evaluation/relpose-angular.yaml](configs/evaluation/relpose-angular.yaml):
 
 ```bash
 # python relpose/sampling.py  # to generate seq-id-maps under datasets/seq-id-maps, which is provided in this repo
@@ -58,16 +71,22 @@ python relpose/eval_angle.py
 # torchrun --nnodes=1 --nproc_per_node=8 videodepth/eval_angle_mp.py   # accelerate with multi gpus
 ```
 
-### 3.2 Distance Metrics
+To evaluate specific models and/or datasets, run:
 
 ```bash
-python relpose/eval_dist.py
-# torchrun --nnodes=1 --nproc_per_node=8 videodepth/eval_dist_mp.py  # accelerate with multi gpus
+python relpose/eval_angle.py eval_models=[MODEL_NAMES] eval_datasets=[EVAL_DATASETS]
 ```
 
-## 4. Multi-view Reconstruction (Point Map Estimation)
+where `MODEL_NAMES` is any of `pi3,pi3_exrot,vggt,vggt_exrot,worldmirror,worldmirror_exrot`
+
+and `EVAL_DATASETS` is any of `Re10K,ETH3D`
+
+
+## 3. Dense Reconstruction (Point Map Estimation)
 
 See [mv_recon/README.md](mv_recon/README.md) for more details.
+
+To evaluate all of Pi3, VGGT, WorldMirror, and their finetuned versions on UnSceneRecon, ETH3D, DTU, 7Scenes, and NRGBD, run the commands below to use the preconfigured config at [configs/evaluation/mv_recon.yaml](configs/evaluation/mv_recon.yaml):
 
 ```bash
 # python mv_recon/sampling.py  # to generate seq-id-maps under datasets/seq-id-maps, which is provided in this repo
@@ -75,9 +94,21 @@ python mv_recon/eval.py
 # torchrun --nnodes=1 --nproc_per_node=8 mv_recon/eval_mp.py  # accelerate with multi gpus
 ```
 
-## Acknowledgement
+To evaluate specific models and/or datasets, run:
 
-Our work mainly builds upon:
+```bash
+python monodepth/eval.py eval_models=[MODEL_NAMES] eval_datasets=[EVAL_DATASETS]
+```
+
+where `MODEL_NAMES` is any of `pi3,pi3_exrot,vggt_pointhead,vggt_exrot_pointhead,worldmirror,worldmirror_exrot`
+
+and `EVAL_DATASETS` is any of `7scenes-sparse,7scenes-dense,NRGBD-sparse,NRGBD-dense,DTU,ETH3D,UnSceneRecon`
+
+Note that for this evaluation, we use the VGGT model output from the point head (`vggt_pointhead` and `vggt_exrot_pointhead`), not unprojected depth (`vggt` and `vggt_exrot`).
+
+## Acknowledgements
+
+This fork mainly builds upon:
 
 - [DUSt3R](https://github.com/naver/dust3r)
 - [MonST3R](https://github.com/Junyi42/monst3r)
@@ -85,10 +116,27 @@ Our work mainly builds upon:
 - [CUT3R](https://github.com/CUT3R/CUT3R)
 - [MoGe](https://github.com/microsoft/MoGe)
 - [VGGT](https://github.com/facebookresearch/vggt)
+- [π³](https://github.com/yyfz/Pi3) ([alt](https://github.com/ZhouTimeMachine/recons_eval))
+- [WorldMirror](https://github.com/Tencent-Hunyuan/HunyuanWorld-Mirror)
+
 
 ## Citation
 
-If you find our work useful, please consider citing:
+If you find this work useful, please consider citing:
+
+```bibtex
+@misc{zhang2025emergentextremeviewgeometry3d,
+      title={Emergent Extreme-View Geometry in 3D Foundation Models}, 
+      author={Yiwen Zhang and Joseph Tung and Ruojin Cai and David Fouhey and Hadar Averbuch-Elor},
+      year={2025},
+      eprint={2511.22686},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.22686}, 
+}
+```
+
+Please also consider citing the original [π³](https://arxiv.org/abd/2507.13347) authors, who provided the foundations for this evaluation framework:
 
 ```bibtex
 @misc{wang2025pi3,

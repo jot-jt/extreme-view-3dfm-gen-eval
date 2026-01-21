@@ -7,7 +7,11 @@ name: mv_recon
 
 eval_models:
   - pi3
-  - vggt
+  - pi3_exrot
+  - vggt_pointhead        # point head instead of unprojected depth for mv_recon
+  - vggt_exrot_pointhead  # point head instead of unprojected depth for mv_recon
+  - worldmirror
+  - worldmirror_exrot
 
 eval_datasets:
   - 7scenes-sparse
@@ -16,6 +20,7 @@ eval_datasets:
   - NRGBD-dense
   - DTU
   - ETH3D
+  - UnSceneRecon
 
 no_crop: True
 load_img_size: 518

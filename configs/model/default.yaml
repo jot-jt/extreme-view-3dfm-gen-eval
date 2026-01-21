@@ -1,32 +1,55 @@
-pi3:  # model_keyname
+### Pi3 #############
+pi3:
   cfg:
     _target_: models.fastmodel.Pi3
     pretrained_model_name_or_path: yyfz233/Pi3
-    # pretrained_model_name_or_path: checkpoints/Pi3
-  # infer_cameras_w2c:       # default to `interfaces.model_keyname.infer_cameras_w2c`
-  #   _target_: interfaces.pi3.infer_cameras_w2c
-  #   _partial_: true
-  # infer_cameras_c2w:       # default to `interfaces.model_keyname.infer_cameras_c2w`
-  #   _target_: interfaces.pi3.infer_cameras_c2w
-  #   _partial_: true
-  # infer_mv_pointclouds:    # default to `interfaces.model_keyname.infer_mv_pointclouds`
-  #   _target_: interfaces.pi3.infer_mv_pointclouds
-  #   _partial_: true
-  # infer_monodepth:         # default to `interfaces.model_keyname.infer_monodepth`
-  #   _target_: interfaces.pi3.infer_monodepth
-  #   _partial_: true
-  # infer_videodepth:        # default to `interfaces.model_keyname.infer_videodepth`
-  #   _target_: interfaces.pi3.infer_videodepth
-  #   _partial_: true
 
-vggt:
+pi3_exrot:
+  cfg:
+    _target_: models.fastmodel.Pi3
+    pretrained_model_name_or_path: yyfz233/Pi3
+    finetuned_exrot_ckpt_path: checkpoints/extreme-view-3dfm/PI3_changed_bias.pth
+
+
+### VGGT #############
+vggt:  # regular VGGT (unprojected depth for mv_recon eval)
   cfg:
     _target_: models.fastmodel.VGGT
     pretrained_model_name_or_path: facebook/VGGT-1B
-    # pretrained_model_name_or_path: checkpoints/VGGT-1B
 
+vggt_exrot:  # finetuned VGGT for extreme rotations (unprojected depth for mv_recon eval)
+  cfg:
+    _target_: models.fastmodel.VGGT
+    pretrained_model_name_or_path: facebook/VGGT-1B
+    finetuned_exrot_ckpt_path: checkpoints/extreme-view-3dfm/VGGT_changed_bias.pth
+
+vggt_pointhead:  # regular VGGT (point head for mv_recon eval)
+  cfg:
+    _target_: models.fastmodel.VGGT
+    pretrained_model_name_or_path: facebook/VGGT-1B
+
+vggt_exrot_pointhead:  # finetuned VGGT for extreme rotations (point head for mv_recon eval)
+  cfg:
+    _target_: models.fastmodel.VGGT
+    pretrained_model_name_or_path: facebook/VGGT-1B
+    finetuned_exrot_ckpt_path: checkpoints/extreme-view-3dfm/VGGT_changed_bias.pth
+
+
+### WorldMirror #############
+worldmirror:
+  cfg:
+    _target_: models.fastmodel.WorldMirror
+    pretrained_model_name_or_path: tencent/HunyuanWorld-Mirror
+
+worldmirror_exrot:
+  cfg:
+    _target_: models.fastmodel.WorldMirror
+    pretrained_model_name_or_path: tencent/HunyuanWorld-Mirror
+    finetuned_exrot_ckpt_path: checkpoints/extreme-view-3dfm/WM_changed_bias.pth
+
+
+### Others #############
 moge:
   cfg:
     _target_: models.fastmodel.MoGe
     pretrained_model_name_or_path: Ruicheng/moge-vitl
-    # pretrained_model_name_or_path: checkpoints/moge.pt

@@ -6,9 +6,13 @@ defaults:
 name: monodepth
 
 eval_models:
+  # - moge
   - pi3
-  - moge
+  - pi3_exrot
   - vggt
+  - vggt_exrot
+  - worldmirror
+  - worldmirror_exrot
 
 eval_datasets:
   - sintel

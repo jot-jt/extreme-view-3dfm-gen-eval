@@ -7,7 +7,11 @@ name: videodepth
 
 eval_models:
   - pi3
+  - pi3_exrot
   - vggt
+  - vggt_exrot
+  - worldmirror
+  - worldmirror_exrot
 
 eval_datasets:
   - sintel
