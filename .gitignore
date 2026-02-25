@@ -24,7 +24,6 @@ batchscript-*
 *.pyc
 *.egg-info
 *.pt
-*.pth
 *.zip
 *.tar.gz
 *.render*
