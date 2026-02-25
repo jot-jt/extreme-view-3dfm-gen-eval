@@ -22,7 +22,7 @@ For Extreme Relative Rotation Estimation evaluation, please see [the main GitHub
 Please clone the repository with submodules:
 
 ```bash
-git clone --recurse-submodules https://github.com/theREALevan/extreme-view-3dfm.git
+git clone --recurse-submodules https://github.com/jot-jt/extreme-view-3dfm-gen-eval.git
 ```
 
 ### Configurations and General Documentation
